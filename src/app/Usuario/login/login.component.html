@@ -1,0 +1,19 @@
+<form [formGroup]="loginFrm" (submit)="onSubmit()">
+    <div class="form">
+        <h2>Welcome</h2>
+        <div class="input">
+            <div class="inputBox">
+                <label>User</label>
+                <input for="email" type="text" formControlName="email" placeholder="name@gmail.com">
+            </div>
+            <div class="inputBox">
+                <label>Password</label>
+                <input for="password" type="password" formControlName="password" placeholder="······">
+            </div>
+            <div class="inputBox">
+                <input type="submit" [disabled]="!loginFrm.valid" value="Enviar">
+            </div>
+        </div>
+        <p class="forget">Forgot Password? <a href="http://localhost:4200/Login">Click Here</a></p>
+    </div>
+</form>
